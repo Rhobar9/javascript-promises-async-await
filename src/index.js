@@ -20,6 +20,6 @@ function getBooksOrMovies(){
 }
 
 const getBooksOrMoviesPromise = getBooksOrMovies();
-getBooksAndMoviesPromise.then(results => {console.log("getBooksOrMoviesPromise", results);}
+getBooksOrMoviesPromise.then(results => {console.log("getBooksOrMoviesPromise", results);}
 );
 
