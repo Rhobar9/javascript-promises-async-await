@@ -1,5 +1,4 @@
-import {fetchWithTimeout} from './services';
-import { fetchMovies, fetchBooks} from '.services';
+import { fetchWithTimeout, fetchMovies, fetchBooks } from './services';
 const movies = require('./data/movies.json');
 
 const getBooksAndMovies = () => {
@@ -11,7 +10,8 @@ const getBooksAndMovies = () => {
 }
 
 const getBooksAndMoviesPromise = getBooksAndMovies();
-getBooksAndMoviesPromise.then(results => {console.log("getBooksAndMoviesPromise", results);})
+getBooksAndMoviesPromise.then(results => {console.log('getBooksAndMoviesPromise', results);}
+);
 
 function getBooksOrMovies(){
     return Promise.race([fetchBooks(), fetchMovies()])
@@ -20,5 +20,6 @@ function getBooksOrMovies(){
 }
 
 const getBooksOrMoviesPromise = getBooksOrMovies();
-getBooksAndMoviesPromise.then(results => {console.log("getBooksOrMoviesPromise", results);})
+getBooksAndMoviesPromise.then(results => {console.log("getBooksOrMoviesPromise", results);}
+);
 
